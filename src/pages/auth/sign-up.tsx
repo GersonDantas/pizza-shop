@@ -61,7 +61,8 @@ export function SignUp() {
               Criar conta gratuita
             </h1>
             <p className="text-sm text-muted-foreground">
-              Seja um parceiro da pizza.shop e comece a vender pizzas pelo nosso app.
+              Seja um parceiro da pizza.shop e
+              comece a vender pizzas pelo nosso app.
             </p>
           </div>
 
@@ -110,15 +111,16 @@ export function SignUp() {
               className="px-6 text-center
               leading-relaxed text-sm text-muted-foreground"
             >
-              Ao criar uma conta, você aceita os{' '}
+              Ao criar uma conta, você aceita os
+              <br />
               <Link
                 to="/terms"
                 className="underline underline-offset-4"
                 target="_blank"
               >
-                termos de uso
+                termos de uso {' '}
               </Link>
-              {' '}e a{' '}
+              e a{' '}
               <Link
                 to="/privacy"
                 className="underline underline-offset-4 hover:text-primary"
