@@ -4,15 +4,22 @@ import { TableCell } from '@/components/ui/table'
 import { TableRow } from '@/components/ui/table'
 import { ArrowRight, Search } from 'lucide-react'
 import React from 'react'
+import { Dialog, DialogTrigger } from '@/components/ui/dialog'
+import { OrderDetails } from './order-details'
 
 const OrderTableRow: React.FC = () => {
   return (
     <TableRow>
       <TableCell>
-        <Button variant="outline" size="xs" className="rounded-full">
-          <Search className="w-3 h-3" />
-          <span className="sr-only">Detalhes do pedido</span>
-        </Button>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button variant="outline" size="xs">
+              <Search className="h-3 w-3" />
+              <span className="sr-only">Detalhes do pedido</span>
+            </Button>
+          </DialogTrigger>
+          <OrderDetails />
+        </Dialog>
       </TableCell>
       <TableCell className="font-mono text-sm font-medium">
         123456
